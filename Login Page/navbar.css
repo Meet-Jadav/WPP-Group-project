@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0707; /* Dark background for the entire page */
+    color: #ffffff; /* Light text color */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Increased padding for better spacing */
+    background-color: #1e1e1e; /* Dark background for the navbar */
+    border-bottom: 1px solid #333; /* Darker border */
+    border-width: 10px;
+    border-image: linear-gradient(to bottom, rgb(219, 217, 217), #715191, #32e055) 1;
+
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    margin: 0 20px; /* Increased margin for better spacing */
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500; /* Medium font weight */
+}
+
+.navbar-item:hover {
+    color: #bb86fc; /* Light purple on hover */
+    transition:0.3s;
+}
+
+.navbar-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* White logo text */
+    margin-right: 30px; /* Increased margin for better spacing */
+}
+
+.navbar-button {
+    transition: 0.8s;
+    padding: 8px 16px;
+    background-color: #bb86fc; /* Light purple for the button */
+    color: #121212; /* Dark text for the button */
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500; /* Medium font weight */
+    cursor: pointer;
+    margin-left: 20px; /* Increased margin for better spacing */
+}
+
+.navbar-button:hover {
+    background-color: #9a67ea; /* Slightly darker purple on hover */
+    margin-bottom: 1px; 
+    margin-right: 1px;
+    box-shadow: #ffffff 0px 0px 10px 0px;
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+    transition: 0.3s;
+}
+
+.navbar-button:active{
+    transform: translateY(2px); /* Slightly lower the button on click */
+    box-shadow: none; /* Remove shadow on click */
+    transition: 0.3s;
+}
