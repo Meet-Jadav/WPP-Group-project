@@ -1,0 +1,32 @@
+.body {
+    background: linear-gradient(to right, #2a2a4a, #474380, #2a2a4a); 
+    margin: 0;
+    height: 100vh;
+}
+
+.list-data{
+    padding-top: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    row-gap: 15px;
+    margin-top: 400px;
+    margin-bottom: 350px;
+    padding-bottom: 400px;
+    height: 100vh;
+    color: #fff;
+}
+
+.element{
+   
+    background-color: rgb(89, 173, 221);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 750px;
+    min-height: 130px;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
+}
