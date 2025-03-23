@@ -94,6 +94,23 @@
     text-align: center;
     font-size: 1rem;
   }
+    /* on active enent added.*/
+  input[type="text"]:focus {
+    transition: transform 0.3s ease, box-shadow 0.4s ease-in-out;
+    outline: none;
+    box-shadow: 0 0 20px #3ddaaa;
+    transform: scale(1.05);
+  }
+  
+  /* SELECT */
+  select {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffe1;
+    font-size: 1rem;
+}
   
   /* BUTTON */
   button {
@@ -112,3 +129,8 @@
     box-shadow: 0 0 10px #00ffe1;
   }
   
+  button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px #00ffe1;
+    
+  }
