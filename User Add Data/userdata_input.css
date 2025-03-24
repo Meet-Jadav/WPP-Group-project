@@ -5,7 +5,6 @@
 }
 
 .list-data{
-    padding-top: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,8 +15,8 @@
     gap: 15px;
     row-gap: 15px;
     margin-top: 450px;
-    margin-bottom: 5000000px;
-    height: 100vh;
+    margin-bottom: 450px;
+    height: 100%;
     color: #fff; 
 }
 
