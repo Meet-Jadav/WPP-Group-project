@@ -21,25 +21,44 @@
 }
 
 .element{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
     opacity: 0.8;
     background-color: rgb(89, 173, 221);
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     width: 750px;
+    height: 160px;
     min-height: 130px;
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
+    overflow: hidden;
+    word-wrap: break-word;  
+    transition: height 2s ease-in-out;
     /* position: sticky;
     top: 0; */
-
-    /* animation:appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%; */
-
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+    
+    
 }
+
+.element:hover{
+   height:600px;
+   
+  } 
+  
+  .image{
+   height: 150px;
+  }
+
+  .text{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
 
 .adding-element{
     animation: appear 5s linear;
