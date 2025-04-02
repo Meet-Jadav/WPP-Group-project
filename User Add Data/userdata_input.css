@@ -52,6 +52,8 @@
   
   .image{
    height: 150px;
+   border: #3fa5a0 solid 2px;
+    border-radius: 10px;
   }
 
   .text{
