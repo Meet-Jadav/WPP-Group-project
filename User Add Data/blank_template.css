@@ -1,0 +1,123 @@
+.body {
+    background: linear-gradient(to right, #2a2a4a, #474380, #2a2a4a); 
+    margin: 0;
+    height: 100vh;
+}
+
+.list-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+    row-gap: 15px;
+    margin-top: 450px;
+    margin-bottom: 450px;
+    height: 100%;
+    color: #fff; 
+}
+/* --------------------------------------------------------------------------- */
+.element{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    opacity: 0.8;
+    background-color: rgb(89, 173, 221);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 750px;
+    height: 160px;
+    min-height: 130px;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
+    overflow: hidden;
+    word-wrap: break-word;  
+    transition: height 2s ease-in-out;
+    /* position: sticky;
+    top: 0; */
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    
+    
+}
+
+.element:hover{
+   height:600px;
+   
+  } 
+  
+  .image{
+   height: 150px;
+   border: #3fa5a0 solid 2px;
+    border-radius: 10px;
+  }
+
+  .text{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* ---------------------------------------------------------------------- */
+.adding-element{
+
+    background-color: rgb(87, 96, 101,0.5);
+    
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 750px;
+    height: 160px;
+    min-height: 130px;
+
+    overflow: hidden;
+    word-wrap: break-word;  
+
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.add_image{
+    height: 150px;
+    border: #4e5a59 solid 2px;
+    border-radius: 12px;
+}
+
+.add_text{
+    text-align: left;
+    vertical-align: top;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4551574e;
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.913);   
+    color: #fff;
+    width :100%;
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.4;
+    }
+    to{
+        opacity: 1;
+        scale: 1; 
+    }
+}
