@@ -36,19 +36,13 @@
     overflow: hidden;
     word-wrap: break-word;  
     transition: height 2s ease-in-out;
-    /* position: sticky;
-    top: 0; */
+
+
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-    
-    
+        
 }
-
-.element:hover{
-   height:600px;
-   
-  } 
   
   .image{
    height: 150px;
