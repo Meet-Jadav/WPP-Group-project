@@ -35,7 +35,7 @@
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
     overflow: hidden;
     word-wrap: break-word;  
-    transition: height 2s ease-in-out;
+    transition: height 2s ease-in-out; /* Add this line for smooth height transition */
 
 
     animation: appear 5s linear;
