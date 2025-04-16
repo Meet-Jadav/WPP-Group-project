@@ -15,6 +15,8 @@ body {
     background: linear-gradient(135deg, #000000, #131b36, #0c0385);
     color: #fff;
     animation: gradientShift 20s ease infinite;
+    background-size: 300% 300%;
+
 }
 
 /* Neon Glow Effect */
