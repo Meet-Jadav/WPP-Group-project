@@ -12,6 +12,7 @@ elements.forEach(function (element) {
         } else {
             let currentHeight = element.scrollHeight;
             element.style.height = '160px';
+      
             requestAnimationFrame(() => {
                 element.style.height = currentHeight + 'px';
             });
