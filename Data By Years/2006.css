@@ -30,7 +30,7 @@
     width: 930px;
     font-size: 22px;
     margin: 10px 50px;
-    @@ -32, 13+32, 29 @@ box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
     /* position: sticky;
      top: 0; */
 

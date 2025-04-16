@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password - Chrono Rewind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Side - Background Image -->
+        <div class="left-side">
+            <h1>Reset Your Timeline</h1>
+        </div>
+
+        <!-- Right Side - Forgot Password Form -->
+        <div class="right-side">
+            <div class="login-box">
+                <h2>Forgot Password</h2>
+                <input type="email" id="forgot-email" placeholder="Enter your registered email" required>
+                <button onclick="submitForgotPassword()">Send Reset Link</button>
+                <p class="register-link">Back to <a href="login.html">Login</a></p>
+            </div>
+
+            <!-- Back Button -->
+            <button class="back-button" onclick="goBack()">← Back to Homepage</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function submitForgotPassword() {
+            const email = document.getElementById("forgot-email").value;
+            if (email === "") {
+                alert("Please enter your email.");
+            } else {
+                alert("If this email exists, a reset link will be sent.");
+                // Here you’d integrate backend functionality
+            }
+        }
+    </script>
+</body>
+</html>
