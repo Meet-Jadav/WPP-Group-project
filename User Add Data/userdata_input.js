@@ -1,43 +1,84 @@
-const container = document.getElementById('timeline-container');
+var elements = document.querySelectorAll('.element');
 
-// Create the first input field
-addNewInput();
+elements.forEach(function (element) {
+    element.addEventListener('click', function () {
+        if (element.classList.contains('expanded')) {
+            let currentHeight = element.scrollHeight;
+            element.style.height = currentHeight + 'px';
+            requestAnimationFrame(() => {
+                element.style.height = '160px';
+            });
+            element.classList.remove('expanded');
+        } else {
+            let currentHeight = element.scrollHeight;
+            element.style.height = '160px';
+      
+            requestAnimationFrame(() => {
+                element.style.height = currentHeight + 'px';
+            });
+            element.classList.add('expanded');
+        }
+    });
 
-function addNewInput() {
-  const input = document.createElement('input');
-  input.type = 'text';
-  input.className = 'event-input';
-  input.placeholder = 'Add your event...';
+    element.style.transition = 'height 0.5s ease-in-out';
+});
 
-  // Listen for Enter key or blur event
-  input.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      saveEvent(this);
-    }
+// Add the event .
+
+function addEvent() {
+  const imageUrlInput = document.querySelector('.add_image_url').value.trim();
+  const imageFileInput = document.querySelector('.add_image_file').files[0];
+  const eventText = document.querySelector('.add_text').value.trim();
+
+  if (!imageUrlInput && !imageFileInput) {
+      alert("Please provide either an image URL or select a file.");
+      return;
+  }
+  if (!eventText) {
+      alert("Please enter event text.");
+      return;
+  }
+
+  let imageSrc = "";
+
+  if (imageFileInput) {
+      imageSrc = URL.createObjectURL(imageFileInput); // Use local file
+  } else {
+      imageSrc = imageUrlInput; // Use pasted URL
+  }
+
+  const container = document.querySelector('.list-data');
+
+  const newElement = document.createElement('div');
+  newElement.className = 'element';
+  newElement.innerHTML = `
+      <div><img class="image" src="${imageSrc}" alt="New Event Image"></div>
+      <div class="text">${eventText}</div>
+  `;
+
+  newElement.style.transition = 'height 0.5s ease-in-out';
+  newElement.addEventListener('click', function () {
+      if (newElement.classList.contains('expanded')) {
+          const currentHeight = newElement.scrollHeight;
+          newElement.style.height = currentHeight + 'px';
+          requestAnimationFrame(() => {
+              newElement.style.height = '160px';
+          });
+          newElement.classList.remove('expanded');
+      } else {
+          const currentHeight = newElement.scrollHeight;
+          newElement.style.height = '160px';
+          requestAnimationFrame(() => {
+              newElement.style.height = currentHeight + 'px';
+          });
+          newElement.classList.add('expanded');
+      }
   });
 
-  input.addEventListener('blur', function () {
-    if (this.value.trim() !== '') {
-      saveEvent(this);
-    }
-  });
+  container.appendChild(newElement);
 
-  container.appendChild(input);
-  input.focus();
-}
-
-function saveEvent(inputElement) {
-  const text = inputElement.value.trim();
-  if (text === '') return;
-
-  // Create a timeline block (div) with the text
-  const eventDiv = document.createElement('div');
-  eventDiv.className = 'event';
-  eventDiv.textContent = text;
-
-  // Replace the input with the event block
-  container.replaceChild(eventDiv, inputElement);
-
-  // Add a new empty input for the next event
-  addNewInput();
+  // Clear inputs
+  document.querySelector('.add_image_url').value = '';
+  document.querySelector('.add_image_file').value = '';
+  document.querySelector('.add_text').value = '';
 }

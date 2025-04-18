@@ -111,6 +111,7 @@
     }
 }
 
+<<<<<<< Updated upstream
 /* New styles for modal dialog and its elements */
 #addDialog {
     background: rgba(17, 17, 82, 0.9);
@@ -148,3 +149,108 @@
     transform: scale(1.05);
     box-shadow: 0 0 12px #f800f1;
 }
+=======
+.image-upload-area {
+    position: relative;
+    cursor: pointer;
+}
+
+.preview_image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.adding-element-structured {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    opacity: 0.8;
+    background-color: rgb(89, 173, 221);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 750px;
+    height: 160px;
+    min-height: 130px;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
+    overflow: hidden;
+    word-wrap: break-word;
+    transition: height 0.5s ease-in-out;
+}
+
+.upload-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #3fa5a0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.image-upload-area {
+    position: relative;
+    cursor: pointer;
+}
+
+.preview_image {
+    height: 160px;
+    width: 160px;
+    border: 2px dashed #aaa;
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 10px;
+}
+
+.input-fields input,
+.input-fields textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    resize: none;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.15);
+}
+
+.input-fields textarea {
+    height: 100px;
+}
+
+.input-fields button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4cafaf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-fields button:hover {
+    background-color: #399b9b;
+}
+
+>>>>>>> Stashed changes
