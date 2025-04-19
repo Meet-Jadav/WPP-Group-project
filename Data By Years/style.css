@@ -27,7 +27,9 @@
     opacity: 0.8;
     background-color: rgb(89, 173, 221);
     border-radius: 10px;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 8px 14px;
+    gap: 10px;
     margin: 10px;
     width: 750px;
     height: 160px;
@@ -45,7 +47,11 @@
 }
   
   .image{
-   height: 150px;
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+   /* height: 150px; */
    border: #3fa5a0 solid 2px;
     border-radius: 10px;
   }
@@ -53,6 +59,13 @@
   .text{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .text strong {
+    margin-top: 11px;
+    display: block;
+    font-size: 26px; /* slightly larger for title */
+    margin-bottom: 3px;
   }
 
 /* ---------------------------------------------------------------------- */
@@ -114,4 +127,8 @@
         opacity: 1;
         scale: 1; 
     }
+}
+
+.hide{
+    visibility: hidden;
 }
