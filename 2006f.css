@@ -18,7 +18,7 @@
     margin-bottom: 450px;
     height: 100%;
     color: #fff; 
-    width: 1000px;
+    width: 80%;
 }
 /* --------------------------------------------------------------------------- */
 .element{
@@ -28,9 +28,9 @@
     opacity: 0.8;
     background-color: rgb(89, 173, 221);
     border-radius: 10px;
-    padding: 11px;
-    margin: 10px;
-    width: 1100px;
+    padding: 5%;
+    margin: 5%;
+    width: 60%;
     height: 150px;
     min-height: 130px;
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
