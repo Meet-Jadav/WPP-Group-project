@@ -1,10 +1,10 @@
 .body {
     background: linear-gradient(to right, #2a2a4a, #474380, #2a2a4a); 
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.list-data{
+.list-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,13 +14,14 @@
     align-content: center;
     gap: 15px;
     row-gap: 15px;
-    margin-top: 450px;
+    margin-top: 430px;
     margin-bottom: 450px;
     height: 100%;
     color: #fff; 
 }
+
 /* --------------------------------------------------------------------------- */
-.element{
+.element {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -28,106 +29,59 @@
     background-color: rgb(89, 173, 221);
     border-radius: 10px;
     padding: 8px 14px;
-    gap: 10px;
     margin: 10px;
-    width: 750px;
+    width: 90%; /* Adjust width to be responsive */
     height: 160px;
+    max-width: 750px; /* Limit maximum width */
     min-height: 130px;
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
     overflow: hidden;
     word-wrap: break-word;  
-    transition: height 2s ease-in-out; /* Add this line for smooth height transition */
-
-
+    transition: height 2s ease-in-out;
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-        
 }
-  
-  .image{
-  width: 150px;
+
+.image {
+    width: 150px;
   height: 100%;
   object-fit: cover;
   border-radius: 6px;
    /* height: 150px; */
    border: #3fa5a0 solid 2px;
     border-radius: 10px;
-  }
+}
 
-  .text{
-    font-size: 20px;
+.text {
+    font-size: 1.3rem; /* Use relative font size */
     font-family: Arial, Helvetica, sans-serif;
-  }
+    flex: 1; /* Allow text to take remaining space */
+}
 
-  .text strong {
+.text strong {
     margin-top: 11px;
     display: block;
-    font-size: 26px; /* slightly larger for title */
+    font-size: 1.9rem; /* Slightly larger for title */
     margin-bottom: 3px;
-  }
+}
 
 /* ---------------------------------------------------------------------- */
-.adding-element{
-
-    background-color: rgb(87, 96, 101,0.5);
-    
-
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    width: 750px;
-    height: 160px;
-    min-height: 130px;
-
-    overflow: hidden;
-    word-wrap: break-word;  
-
-    animation: appear 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-
-.add_image{
-    height: 150px;
-    border: #4e5a59 solid 2px;
-    border-radius: 12px;
-}
-
-.add_text{
-    text-align: left;
-    vertical-align: top;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #4551574e;
-    border: none;
-    border-radius: 12px;
-    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.913);   
-    color: #fff;
-    width :100%;
-}
-
-
+/* removed the adding element part.*/
 /* ------------------------------------------------------------------------ */
-
 @keyframes appear {
-    from{
+    from {
         opacity: 0;
         scale: 0.4;
     }
-    to{
+    to {
         opacity: 1;
         scale: 1; 
     }
 }
 
-.hide{
+.hide {
     visibility: hidden;
 }
+
+/* ------------------------------------------------------------------------ */
