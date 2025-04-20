@@ -1,278 +1,212 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Background Animation */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #000000, #131b36, #0c0385);
-    color: #fff;
-    animation: gradientShift 20s ease infinite;
-    background-size: 300% 300%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000, #131b36, #0c0385);
+  color: #fff;
+  animation: gradientShift 20s ease infinite;
+  background-size: 300% 300%;
+  flex-direction: column;
 }
 
 /* Neon Glow Effect */
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Login Container */
 .login-container {
-    display: flex;
-    width: 80%;
-    max-width: 1000px;
-    height: 70vh;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
 }
 
 /* Left Side */
 .left-side {
-    flex: 1;
-    background: url('your-image.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+  flex: 1;
+  background: url('your-image.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
 }
 
 /* Right Side */
 .right-side {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 20px;
 }
 
 /* Login Box */
 .login-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
 }
 
 /* Headings */
 .login-box h2 {
-    font-size: 2rem;
-    color: #00f7ff;
-    text-shadow: 0 0 15px #00f7ff;
+  font-size: 2rem;
+  color: #00f7ff;
+  text-shadow: 0 0 15px #00f7ff;
 }
 
 /* Inputs */
 .login-box input {
-    padding: 12px;
-    width: 100%;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    box-shadow: 0 0 10px #00ffe1;
+  padding: 12px;
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 0 10px #00ffe1;
 }
 
 /* Buttons */
 button {
-    padding: 10px;
-    border: 2px solid #00f7ff;
-    background: transparent;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
-    margin-top: 10px;
-    box-shadow: 0 0 10px #00ffe1;
+  padding: 10px;
+  border: 2px solid #00f7ff;
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin-top: 10px;
+  box-shadow: 0 0 10px #00ffe1;
 }
 
 button:hover {
-    background: rgba(0, 247, 255, 0.2);
-}
-
-/* Register Button - Now Matches Login Button */
-.login-box button {
-    padding: 10px;
-    border: 2px solid #00f7ff;
-    background: transparent;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
-    margin-top: 10px;
-    box-shadow: 0 0 10px #00ffe1;
-}
-
-.login-box button:hover {
-    background: rgba(0, 247, 255, 0.2);
+  background: rgba(0, 247, 255, 0.2);
 }
 
 /* Back Button */
 .back-button {
-    margin-top: 20px;
-    background: rgba(0, 247, 255, 0.2);
-    color: #00f7ff;
-    border-radius: 5px;
-    text-shadow: 0 0 10px #00f7ff;
+  margin-top: 20px;
+  background: rgba(0, 247, 255, 0.2);
+  color: #00f7ff;
+  border-radius: 5px;
+  text-shadow: 0 0 10px #00f7ff;
 }
 
 .back-button:hover {
-    background: rgba(0, 247, 255, 0.4);
+  background: rgba(0, 247, 255, 0.4);
 }
 
-/* Remember Me, Forgot Password, and Register Link - Now Aligned Nicely */
+/* Options */
 .options {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 0.9rem;
-    margin-top: 10px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .options label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    white-space: nowrap;
-    color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  color: white;
 }
 
 .options input[type="checkbox"] {
-    transform: scale(1.2);
-    margin-right: 5px;
+  transform: scale(1.2);
+  margin-right: 5px;
 }
 
 .options a {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 0.9rem;
+  color: #00f7ff;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .options a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Register Link - Aligned in Same Style as Forgot Password */
-.register-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
-.register-link a {
-    color: #00f7ff;
-    text-decoration: none;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
-
-/* ============================= */
 /* 📱 Responsive Styles */
-/* ============================= */
-
-/* Tablets */
 @media (max-width: 1024px) {
-    .login-container {
+  .login-container {
       flex-direction: column;
-      height: auto;
-      margin: 30px 0;
       width: 90%;
-    }
-  
-    .left-side, .right-side {
-      flex: none;
+      margin: 30px 0;
+  }
+
+  .left-side, .right-side {
       width: 100%;
-      height: 40vh;
-    }
-  
-    .left-side {
+      height: auto;
+  }
+
+  .left-side {
       font-size: 1.3rem;
-    }
-  
-    .login-box {
+  }
+
+  .login-box {
       width: 80%;
       padding: 25px;
-    }
-  
-    .login-box h2 {
-      font-size: 1.8rem;
-    }
   }
-  
-  /* Mobile Devices */
-  @media (max-width: 600px) {
-    body {
-      flex-direction: column;
-      height: auto;
-      padding: 20px 0;
-    }
-  
-    .login-container {
-      flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .left-side {
+      display: none;
+  }
+
+  .login-container {
       width: 95%;
-      height: auto;
       box-shadow: none;
-    }
-  
-    .left-side {
-      display: none; /* Hide image side for simplicity */
-    }
-  
-    .right-side {
+  }
+
+  .login-box {
+      width: 100%;
       padding: 20px;
-      width: 100%;
-      background: transparent;
-      box-shadow: none;
-    }
-  
-    .login-box {
-      width: 100%;
       box-shadow: 0 0 10px rgba(0, 247, 255, 0.4);
-      padding: 20px;
-    }
-  
-    .login-box h2 {
+  }
+
+  .login-box h2 {
       font-size: 1.5rem;
-    }
-  
-    .login-box input,
-    .login-box button {
+  }
+
+  .login-box input,
+  .login-box button {
       font-size: 0.95rem;
-    }
-  
-    .options {
+  }
+
+  .options {
       flex-direction: column;
       align-items: flex-start;
       gap: 5px;
-    }
-  
-    .register-link {
-      font-size: 0.85rem;
-    }
   }
-  
+}
