@@ -1,0 +1,157 @@
+.body {
+    background: linear-gradient(to right, #2a2a4a, #474380, #2a2a4a); 
+    margin: 0;
+    min-height: 100vh;
+}
+
+.list-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    color: #fff; 
+}
+
+/* --------------------------------------------------------------------------- */
+.element {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    opacity: 0.8;
+    background-color: rgb(89, 173, 221);
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin: 10px;
+    width: 90%; /* Adjust width to be responsive */
+    max-width: 750px; /* Limit maximum width */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 130px;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
+    overflow: hidden;
+    word-wrap: break-word;  
+    transition: height 2s ease-in-out;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.image {
+    width: 25%; /* Use percentage for responsive width */
+    max-width: 150px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 6px;
+    border: #3fa5a0 solid 2px;
+}
+
+.text {
+    font-size: 1rem; /* Use relative font size */
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 1; /* Allow text to take remaining space */
+}
+
+.text strong {
+    margin-top: 11px;
+    display: block;
+    font-size: 1.3rem; /* Slightly larger for title */
+    margin-bottom: 3px;
+}
+
+/* ---------------------------------------------------------------------- */
+.adding-element {
+    background-color: rgba(87, 96, 101, 0.5);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 90%; /* Adjust width to be responsive */
+    max-width: 750px; /* Limit maximum width */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: hidden;
+    word-wrap: break-word;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.add_image {
+    width: 25%; /* Use percentage for responsive width */
+    max-width: 150px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border: #4e5a59 solid 2px;
+    border-radius: 12px;
+}
+
+.add_text {
+    text-align: left;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(69, 81, 87, 0.3);
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.913);   
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+
+/* ------------------------------------------------------------------------ */
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.4;
+    }
+    to {
+        opacity: 1;
+        scale: 1; 
+    }
+}
+
+.hide {
+    visibility: hidden;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .element {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
+
+    .image {
+        width: 50%; /* Adjust image size for smaller screens */
+        max-width: 200px;
+    }
+
+    .text {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        text-align: center;
+    }
+
+    .text strong {
+        font-size: 1.1rem; /* Adjust title size */
+    }
+}
+
+@media (max-width: 480px) {
+    .element {
+        padding: 8px;
+    }
+
+    .image {
+        width: 70%; /* Further reduce image size */
+    }
+
+    .text {
+        font-size: 0.8rem; /* Smaller font size for very small screens */
+    }
+
+    .text strong {
+        font-size: 1rem;
+    }
+}
