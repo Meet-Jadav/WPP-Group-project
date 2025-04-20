@@ -134,3 +134,85 @@
     box-shadow: 0 0 5px #00ffe1;
     
   }
+
+  /* ============================= */
+/* 📱 Responsive Styles */
+/* ============================= */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  .main-content h1 {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  select {
+    width: 220px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 20px;
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .main-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+}
