@@ -1,7 +1,9 @@
 .body {
-    background: linear-gradient(to right, #2a2a4a, #474380, #2a2a4a); 
+    background: linear-gradient(to right, #000000, #0f0f1f, #000000);
     margin: 0;
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
 }
 
 .list-data{
@@ -24,22 +26,21 @@
     display: flex;
     flex-direction: row;
     gap: 15px;
-    opacity: 0.8;
-    background-color: rgb(89, 173, 221);
-    border-radius: 10px;
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0.6);
+    border: 2px solid #00f0ff;
+    border-radius: 12px;
     /* padding: 10px; */
-    padding: 8px 14px;
+    padding: 14px 20px;
     gap: 10px;
-    margin: 10px;
+    margin: 12px;
     width: 750px;
     height: 160px;
     min-height: 130px;
-    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.913);
+    box-shadow: 0 0 20px #00f0ff, 0 0 30px #ff00ff38;
     overflow: hidden;
     word-wrap: break-word;  
-    transition: height 2s ease-in-out; /* Add this line for smooth height transition */
-
-
+    transition: all 0.5s ease-in-out; 
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -56,34 +57,41 @@
     border-radius: 10px;
   }
 
+  .element:hover {
+    box-shadow: 0 0 25px #00f0ff, 0 0 40px #ff00ff;
+    transform: scale(1.02);
+  }
+
   .text{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
   }
 
   .text strong {
-    margin-top: 11px;
+    color: #00f0ff;
+    margin-top: 15px;
     display: block;
     font-size: 26px; /* slightly larger for title */
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
 /* ---------------------------------------------------------------------- */
 .adding-element{
 
-    background-color: rgb(87, 96, 101,0.5);
-    
+    background-color: rgb(0, 0, 0, 0.4);
+    border: 2px solid #00f0ff;
 
     display: flex;
     flex-direction: row;
     gap: 15px;
-
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 10px;
     margin: 10px;
     width: 750px;
     height: 160px;
     min-height: 130px;
+    box-shadow: 0 0 15px #00f0ff;
 
     overflow: hidden;
     word-wrap: break-word;  
@@ -95,8 +103,9 @@
 
 .add_image{
     height: 150px;
-    border: #4e5a59 solid 2px;
+    border: #ff00ff solid 2px;
     border-radius: 12px;
+    box-shadow: 0 0 10px #ff00ff;
 }
 
 .add_text{
@@ -107,7 +116,7 @@
     justify-content: flex-start;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #4551574e;
+    background-color: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 12px;
     box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.913);   
