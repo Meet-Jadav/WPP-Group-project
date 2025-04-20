@@ -1,38 +1,58 @@
-// Function to switch between Login and Register forms
+// Toggle between login and register forms
 function toggleForms() {
     let loginForm = document.getElementById("login-form");
     let registerForm = document.getElementById("register-form");
 
-    loginForm.style.display = loginForm.style.display === "none" ? "block" : "none";
-    registerForm.style.display = registerForm.style.display === "none" ? "block" : "none";
-}
-
-// Function to validate login
-function validateLogin() {
-    let email = document.getElementById("login-email").value;
-    let password = document.getElementById("login-password").value;
-
-    if (email === "" || password === "") {
-        alert("Please fill in both fields.");
-        return false;
+    if (loginForm.style.display === "none") {
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+    } else {
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
     }
-    alert("Login Successful!");
 }
 
-// Function to validate registration
+// Register user and save to localStorage
 function validateRegister() {
-    let name = document.getElementById("register-name").value;
-    let email = document.getElementById("register-email").value;
-    let password = document.getElementById("register-password").value;
+    let name = document.getElementById("register-name").value.trim();
+    let email = document.getElementById("register-email").value.trim().toLowerCase();
+    let password = document.getElementById("register-password").value.trim();
 
     if (name === "" || email === "" || password === "") {
         alert("Please fill in all fields.");
-        return false;
+        return;
     }
-    alert("Registration Successful!");
+
+    // Save user data to localStorage
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
+    localStorage.setItem("userName", name);
+
+    alert("Registration Successful! You can now log in.");
+    toggleForms();
 }
 
-// Function to go back to homepage
+// Login validation using stored data
+function validateLogin() {
+    let email = document.getElementById("login-email").value.trim().toLowerCase();
+    let password = document.getElementById("login-password").value.trim();
+
+    if (email === "" || password === "") {
+        alert("Please fill in both fields.");
+        return;
+    }
+
+    let storedEmail = localStorage.getItem("userEmail");
+    let storedPassword = localStorage.getItem("userPassword");
+
+    if (email === storedEmail && password === storedPassword) {
+        alert("Login Successful!");
+    } else {
+        alert("Incorrect email or password.");
+    }
+}
+
+// Go back to homepage
 function goBack() {
-    window.location.href = "index.html"; // Make sure your homepage file is named index.html
+    window.location.href = "index.html";
 }
