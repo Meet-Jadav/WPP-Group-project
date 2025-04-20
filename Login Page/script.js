@@ -12,6 +12,13 @@ function toggleForms() {
     }
 }
 
+// Email validation helper
+function isValidEmail(email) {
+    // Basic email regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
 // Register user and save to localStorage
 function validateRegister() {
     let name = document.getElementById("register-name").value.trim();
@@ -20,6 +27,16 @@ function validateRegister() {
 
     if (name === "" || email === "" || password === "") {
         alert("Please fill in all fields.");
+        return;
+    }
+
+    if (!isValidEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
         return;
     }
 
