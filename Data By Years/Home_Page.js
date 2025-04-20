@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   exploreButton.addEventListener("click", handleExplore);
+  // this is for, when we press the enter.
   yearInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
       handleExplore();
