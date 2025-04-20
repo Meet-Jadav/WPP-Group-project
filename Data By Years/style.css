@@ -186,7 +186,6 @@
     margin-bottom: 200px;
   }
 }
-
 /* 🔻 Responsive for mobile (max-width: 600px) */
 @media (max-width: 600px) {
   .element,
@@ -217,4 +216,21 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
+}
+
+.back-button {
+  width: auto;
+  height: 50px;
+  margin-top: 20px;
+  background: rgba(0, 247, 255, 0.2);
+  color: #00f7ff;
+  border-radius: 9px;
+  text-shadow: 0 0 10px #00f7ff;
+  border: none;
+  box-shadow: 0 0 10px #00f7ff;
+  font-size: 20px;
+}
+
+.back-button:hover {
+  background: rgba(0, 247, 255, 0.4);
 }
