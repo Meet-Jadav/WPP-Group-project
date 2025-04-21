@@ -51,7 +51,7 @@
     overflow: hidden;
     word-wrap: break-word;  
     transition: all 0.5s ease-in-out; 
-    animation: appear 5s linear;
+    animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
         
@@ -87,72 +87,8 @@
   }
 
 /* ---------------------------------------------------------------------- */
-.adding-element{
 
-    background-color: rgb(0, 0, 0, 0.4);
-    border: 2px solid #00f0ff;
-
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    border-radius: 12px;
-    padding: 10px;
-    margin: 10px;
-    width: 750px;
-    height: 160px;
-    min-height: 130px;
-    box-shadow: 0 0 15px #00f0ff;
-
-    overflow: hidden;
-    word-wrap: break-word;  
-
-    animation: appear 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-
-.add_image{
-    height: 150px;
-    border: #ff00ff solid 2px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #ff00ff;
-}
-
-.add_text{
-    text-align: left;
-    vertical-align: top;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 12px;
-    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.913);   
-    color: #fff;
-    width :100%;
-}
-
-
-/* ------------------------------------------------------------------------ */
-
-@keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0.4;
-    }
-    to{
-        opacity: 1;
-        scale: 1; 
-    }
-}
-
-.hide{
-    visibility: hidden;
-}
-
-/* 🔻 Responsive for tablets and below (max-width: 1024px) */
+🔻 Responsive for tablets and below (max-width: 1024px)
 @media (max-width: 1024px) {
   .element,
   .adding-element {
@@ -216,6 +152,23 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
+}
+
+/* ------------------------------------------------------------------------ */
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.4;
+    }
+    to{
+        opacity: 1;
+        scale: 1; 
+    }
+}
+
+.hide{
+    visibility: hidden;
 }
 
 .back-button {
