@@ -14,23 +14,21 @@
 
 #heading {
   writing-mode: vertical-lr;
+  text-align: center;
+  height: 100vh; /* Make the heading span the full height of the viewport */
   transform: rotate(180deg);
-  font-size: 24px;
-  font-weight: bold;
   position: fixed;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(180deg);
+  top: 0; /* Align the heading to the top */
   padding: 10px;
-  font-size: 50px;
   font-weight: bold;
   color: #00f7ff;
   text-shadow: 0 0 10px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
 }
-
-
-
-
 
 @keyframes gradientShift {
   0% {
