@@ -82,7 +82,7 @@
   transition: all 0.5s ease-in-out;
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 40% ;
 
 }
 
@@ -118,7 +118,8 @@
 
 /* ---------------------------------------------------------------------- */
 
-🔻 Responsive for tablets and below (max-width: 1024px) @media (max-width: 1024px) {
+/* 🔻 Responsive for tablets and below (max-width: 1024px) */
+ @media (max-width: 1024px) {
 
   .element,
   .adding-element {
